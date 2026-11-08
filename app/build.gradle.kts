@@ -8,7 +8,7 @@ android {
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "com.kizqr.app"
+        applicationId = "org.kiz.qr"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
