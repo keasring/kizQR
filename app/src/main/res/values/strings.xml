@@ -1,0 +1,112 @@
+<resources>
+    <string name="app_name">kizQR</string>
+
+    <!-- Навигация -->
+    <string name="nav_create">Создать</string>
+    <string name="nav_scan">Сканер</string>
+    <string name="nav_history">История</string>
+    <string name="nav_settings">Настройки</string>
+
+    <!-- Типы контента -->
+    <string name="type_text">Текст</string>
+    <string name="type_url">Ссылка</string>
+    <string name="type_wifi">Wi-Fi</string>
+    <string name="type_contact">Контакт</string>
+    <string name="type_sms">SMS</string>
+    <string name="type_phone">Телефон</string>
+    <string name="type_geo">Гео</string>
+
+    <!-- Создание -->
+    <string name="create_title">Создание QR-кода</string>
+    <string name="action_style">Стиль</string>
+    <string name="action_save">Сохранить</string>
+    <string name="action_share">Поделиться</string>
+    <string name="hint_text">Введите текст…</string>
+    <string name="hint_url">https://example.com</string>
+    <string name="hint_wifi_ssid">Имя сети (SSID)</string>
+    <string name="hint_wifi_password">Пароль</string>
+    <string name="wifi_no_pass">Без пароля</string>
+    <string name="wifi_wpa">WPA/WPA2/WPA3</string>
+    <string name="wifi_wep">WEP</string>
+    <string name="wifi_hidden">Скрытая сеть</string>
+    <string name="hint_first_name">Имя</string>
+    <string name="hint_last_name">Фамилия</string>
+    <string name="hint_org">Организация</string>
+    <string name="hint_phone">Телефон</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_website">Сайт</string>
+    <string name="hint_note">Заметка</string>
+    <string name="hint_sms_to">Номер получателя</string>
+    <string name="hint_sms_text">Текст сообщения</string>
+    <string name="hint_phone_number">Номер телефона</string>
+    <string name="hint_lat">Широта (например 55.7558)</string>
+    <string name="hint_lng">Долгота (например 37.6173)</string>
+    <string name="preset_suggested">Похоже, это %1$s — применить фирменный стиль?</string>
+    <string name="preset_applied">Стиль «%1$s» применён</string>
+    <string name="saved_ok">Сохранено в Pictures/kizQR</string>
+    <string name="saved_error">Не удалось сохранить</string>
+    <string name="empty_content">Заполните форму, чтобы увидеть QR-код</string>
+
+    <!-- Редактор стиля -->
+    <string name="style_title">Стиль QR-кода</string>
+    <string name="style_presets">Пресеты сервисов</string>
+    <string name="style_dots">Форма точек</string>
+    <string name="style_eyes">Форма «глаз»</string>
+    <string name="style_color">Цвет</string>
+    <string name="style_background">Фон</string>
+    <string name="style_gradient">Градиент</string>
+    <string name="style_transparent_bg">Прозрачный фон</string>
+    <string name="style_logo">Логотип в центре</string>
+    <string name="style_logo_none">Без логотипа</string>
+    <string name="style_logo_photo">Из фото</string>
+    <string name="style_quiet_zone">Отступ по краям</string>
+    <string name="style_error_correction">Коррекция ошибок</string>
+    <string name="ec_note">Высокий уровень (H) включается автоматически при логотипе</string>
+
+    <!-- Сканер -->
+    <string name="scan_rationale">Разрешите доступ к камере, чтобы сканировать QR-коды</string>
+    <string name="scan_allow">Разрешить</string>
+    <string name="scan_gallery">Из галереи</string>
+    <string name="scan_not_found">QR-код не найден на изображении</string>
+    <string name="scan_torch">Вспышка</string>
+
+    <!-- Результат -->
+    <string name="result_open">Открыть</string>
+    <string name="result_copy">Копировать</string>
+    <string name="result_copied">Скопировано</string>
+    <string name="result_connect">Подключиться</string>
+    <string name="result_dial">Позвонить</string>
+    <string name="result_sms">Написать SMS</string>
+    <string name="result_map">Открыть карту</string>
+    <string name="result_to_contacts">В контакты</string>
+    <string name="result_make_qr">Создать QR с этим содержимым</string>
+    <string name="result_connect_hint">Подключение запрошено — проверьте уведомление</string>
+
+    <!-- История -->
+    <string name="history_created">Созданные</string>
+    <string name="history_scanned">Отсканированные</string>
+    <string name="history_empty_created">Созданные QR-коды появятся здесь</string>
+    <string name="history_empty_scanned">Отсканированные QR-коды появятся здесь</string>
+    <string name="history_delete">Удалить</string>
+    <string name="history_clear">Очистить всё</string>
+
+    <!-- Настройки -->
+    <string name="settings_title">Настройки</string>
+    <string name="settings_theme">Тема</string>
+    <string name="theme_system">Системная</string>
+    <string name="theme_light">Светлая</string>
+    <string name="theme_dark">Тёмная</string>
+    <string name="settings_dynamic">Динамические цвета</string>
+    <string name="settings_dynamic_hint">Цвета из обоев (Android 12+)</string>
+    <string name="settings_about">О приложении</string>
+    <string name="settings_about_text">kizQR %1$s — создание и сканирование стилизованных QR-кодов</string>
+
+    <!-- Пресеты -->
+    <string name="preset_telegram">Telegram</string>
+    <string name="preset_whatsapp">WhatsApp</string>
+    <string name="preset_vk">VK</string>
+    <string name="preset_instagram">Instagram</string>
+    <string name="preset_youtube">YouTube</string>
+    <string name="preset_spotify">Spotify</string>
+    <string name="preset_none">Свой</string>
+</resources>
