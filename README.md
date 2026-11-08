@@ -1,63 +1,64 @@
 # kizQR
 
-Fast QR code scanner and generator without ads, internet and trackers.
+Быстрый сканер и генератор QR-кодов без рекламы, интернета и трекеров.
 
-Status: in development!
+Статус: в разработке!
 
-## Features
+## Возможности
 
-**Create**
-- Content types: text, URL, Wi-Fi (scans connect to the network), contact (vCard 3.0), SMS, phone, geo point
-- Live preview, PNG export (2048px) to `Pictures/kizQR`, system share sheet
-- Works fully offline — no analytics, no network permission needed
+**Создание**
+- Типы контента: текст, ссылка, Wi-Fi (скан подключается к сети), контакт (vCard 3.0), SMS, телефон, гео-точка
+- Живое превью, экспорт PNG 2048px в галерею (`Pictures/kizQR`), системный шторинг
+- Полностью офлайн — без аналитики и разрешений на интернет
 
-**Style**
-- 6 branded presets with original vector logos: Telegram, WhatsApp, VK, Instagram, YouTube, Spotify
-- Auto-detect: paste a `t.me/...` link and the Telegram style is suggested
-- 5 dot shapes and 4 eye shapes, solid / linear / radial gradient colors, transparent background
-- Logo in the center: a brand mark or any photo from your gallery (error correction is raised to level H automatically)
-- Adjustable error correction (L/M/Q/H) and quiet zone
+**Стилизация**
+- 6 фирменных пресетов с оригинальными векторными логотипами: Telegram, WhatsApp, VK, Instagram, YouTube, Spotify
+- Автодетект по ссылке: вставили `t.me/...` — предложился Telegram-стиль
+- 5 форм точек и 4 формы «глаз», однотонный цвет / линейный / радиальный градиент, прозрачный фон
+- Логотип в центре: брендовый или любое фото из галереи (коррекция ошибок автоматически поднимается до H)
+- Регулируемый уровень коррекции ошибок (L/M/Q/H) и отступ (quiet zone)
 
-**Scan**
-- Camera (CameraX + ML Kit, bundled model, works offline) and gallery import
-- Smart actions on results: open URL, join Wi-Fi network, dial, send SMS, open map, add contact, or turn the scan into a styled QR
+**Сканер**
+- Распознавание камерой (CameraX + ML Kit, модель вшита — работает офлайн) и из галереи (Photo Picker)
+- Умные действия: открыть ссылку, подключиться к Wi-Fi, позвонить, отправить SMS, открыть карту, создать контакт, «создать QR с этим содержимым»
 
-**Extras**
-- History of created and scanned codes (persists across restarts)
-- Dark theme, Material You dynamic colors (Android 12+)
-- Russian UI
+**Прочее**
+- История созданных и отсканированных кодов (переживает перезапуск)
+- Тёмная тема, динамические цвета Material You (Android 12+)
+- Интерфейс на русском
 
-## Tech
+## Технологии
 
 - Kotlin, **Jetpack Compose + Material 3** (AGP 9 built-in Kotlin), Navigation Compose, MVVM
-- QR generation: matrix via **ZXing core**, custom rendering (`QrRenderer`) — dots, eyes, gradients, logos
-- Scanning: **ML Kit Barcode Scanning** (bundled) + **CameraX**
-- History: JSON file + StateFlow; settings — DataStore
-- Brand logos: path data from [Simple Icons](https://github.com/simple-icons/simple-icons) (CC0), normalized for `androidx.core.graphics.PathParser`
+- Генерация QR: матрица через **ZXing core**, рендер свой (`QrRenderer`) — точки, глаза, градиенты, логотипы
+- Сканирование: **ML Kit Barcode Scanning** (bundled) + **CameraX**
+- История: JSON-файл + StateFlow; настройки — DataStore
+- Логотипы брендов: path data из [Simple Icons](https://github.com/simple-icons/simple-icons) (CC0) с нормализацией под `androidx.core.graphics.PathParser`
 
-## Build
+## Сборка
 
 ```bash
 ./gradlew assembleDebug        # APK: app/build/outputs/apk/debug/
-./gradlew test                 # unit tests for QR payload builders and parsers
+./gradlew test                 # юнит-тесты форматов QR и парсеров
 ```
 
-Requirements: JDK 17+, Android SDK (compileSdk 37, minSdk 24).
+Требования: JDK 17+, Android SDK (compileSdk 37, minSdk 24).
 
-## Project layout
+## Структура
 
 ```
 app/src/main/java/com/kizqr/app/
-├── qr/          # QrContent (payload builders), QrStyle, QrRenderer, presets, decoder
-├── data/        # history (JSON + StateFlow), settings (DataStore), PNG export
+├── qr/          # QrContent (payload-билдеры), QrStyle, QrRenderer, пресеты, декодер
+├── data/        # история (JSON+StateFlow), настройки (DataStore), экспорт PNG
 ├── ui/
-│   ├── create/  # create screen + style editor (bottom sheet)
-│   ├── scan/    # scanner (CameraX + ML Kit) and result sheet
-│   ├── history/ # history
-│   └── settings/# theme & about
-└── ui/theme/    # orange Material 3 theme
+│   ├── create/  # экран создания + редактор стилей (bottom sheet)
+│   ├── scan/    # сканер (CameraX + ML Kit) и результат-шит
+│   ├── history/ # история
+│   └── settings/# тема и о приложении
+├── ui/theme/    # оранжевая тема Material 3
+art/icon.jpg    # исходник иконки приложения
 ```
 
-## Licenses & trademarks
+## Лицензии и товарные знаки
 
-The Telegram, WhatsApp, VK, Instagram, YouTube and Spotify logos are trademarks of their respective owners, referenced solely to indicate the purpose of each preset. Glyph path data comes from [Simple Icons](https://github.com/simple-icons/simple-icons) (CC0).
+Логотипы Telegram, WhatsApp, VK, Instagram, YouTube и Spotify являются товарными знаками соответствующих компаний и используются исключительно для указания назначения пресетов. Path data глифов взяты из [Simple Icons](https://github.com/simple-icons/simple-icons) (CC0).
